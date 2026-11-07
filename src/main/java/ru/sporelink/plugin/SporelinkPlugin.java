@@ -25,7 +25,11 @@ public class SporelinkPlugin extends JavaPlugin implements Listener {
         hubUrl = getConfig().getString("hub-url", "http://localhost:5000");
         nodeUrl = getConfig().getString("node-url", "http://localhost:8080");
         getServer().getPluginManager().registerEvents(this, this);
-        getLogger().info("Sporelink Plugin enabled! Hub: " + hubUrl + ", Node: " + nodeUrl);
+        
+        // Регистрируем команду /pay
+        getCommand("pay").setExecutor(new PayCommand(this));
+        
+        getLogger().info("Sporelink Plugin enabled!");
     }
 
     @EventHandler
@@ -68,5 +72,9 @@ public class SporelinkPlugin extends JavaPlugin implements Listener {
             getLogger().warning("Failed to fetch reputation: " + e.getMessage());
             return 0;
         }
+    }
+
+    public String getNodeUrl() {
+        return nodeUrl;
     }
 }

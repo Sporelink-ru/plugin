@@ -3,3 +3,8 @@ version: 0.1.0
 main: ru.sporelink.plugin.SporelinkPlugin
 api-version: '1.20'
 description: Sporelink Federation Integration
+
+commands:
+  pay:
+    description: Send money to another player
+    usage: /pay <player> <amount>
