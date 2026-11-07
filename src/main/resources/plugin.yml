@@ -1,0 +1,5 @@
+name: Sporelink
+version: 0.1.0
+main: ru.sporelink.plugin.SporelinkPlugin
+api-version: '1.20'
+description: Sporelink Federation Integration
