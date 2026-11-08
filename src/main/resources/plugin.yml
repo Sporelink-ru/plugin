@@ -8,3 +8,6 @@ commands:
   pay:
     description: Send money to another player
     usage: /pay <player> <amount>
+  shop:
+    description: Open the server shop
+    usage: /shop

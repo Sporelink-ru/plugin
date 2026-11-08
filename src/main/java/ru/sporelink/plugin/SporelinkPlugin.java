@@ -26,8 +26,9 @@ public class SporelinkPlugin extends JavaPlugin implements Listener {
         nodeUrl = getConfig().getString("node-url", "http://localhost:8080");
         getServer().getPluginManager().registerEvents(this, this);
         
-        // Регистрируем команду /pay
+        // Регистрируем команды
         getCommand("pay").setExecutor(new PayCommand(this));
+        getCommand("shop").setExecutor(new ShopCommand(this));
         
         getLogger().info("Sporelink Plugin enabled!");
     }
