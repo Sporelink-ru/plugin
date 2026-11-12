@@ -11,3 +11,6 @@ commands:
   shop:
     description: Open the server shop
     usage: /shop
+  ah:
+    description: Open Auction House
+    usage: /ah

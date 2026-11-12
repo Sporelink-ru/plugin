@@ -29,6 +29,7 @@ public class SporelinkPlugin extends JavaPlugin implements Listener {
         // Регистрируем команды
         getCommand("pay").setExecutor(new PayCommand(this));
         getCommand("shop").setExecutor(new ShopCommand(this));
+        getCommand("ah").setExecutor(new AuctionCommand(this));
         
         getLogger().info("Sporelink Plugin enabled!");
     }
@@ -77,5 +78,9 @@ public class SporelinkPlugin extends JavaPlugin implements Listener {
 
     public String getNodeUrl() {
         return nodeUrl;
+    }
+
+    public String getHubUrl() { 
+        return hubUrl; 
     }
 }
